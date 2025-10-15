@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Alannovator</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="" />
+  <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/modern-normalize@v3.0.1/modern-normalize.min.css" rel="stylesheet">
+  <link href="./index.css" rel="stylesheet" />
+  <link rel="icon" href="./assets/favicon.png">
+</head>
+
+<body>
+  <div id="root">
+
+    <main id="view">
+      <div id="alan-counter">Loading...</div>
+      <div id="alan-root">
+        <svg id="alan" height="350" viewBox="165.5 237 331 474">
+          <foreignObject width="331" height="474">
+            <img src="./assets/face.png" />
+          </foreignObject>
+          <polyline id="alan-clickable" fill="transparent"
+            points="182,472 202,472 214,470 225,467 231,464 236,459 241,453 245,445 252,434 259,424 264,417 271,410 281,396 285,390 291,378 296,365 300,356 303,345 303,329 303,320 301,315 297,311 295,309 295,290 293,286 293,281 293,274 295,272 300,261 301,258 300,253 302,251 303,247 307,244 312,235 317,227 317,216 321,212 319,183 327,176 325,155 331,150 326,141 324,125 318,113 315,95 310,76 289,54 269,37 242,20 226,20 209,9 193,8 186,0 164,0 148,5 129,1 107,8 103,16 79,18 63,30 53,31 52,39 6,64 10,87 3,108 2,124 3,148 5,168 11,188 16,211 20,226 21,238 20,250 21,254 18,261 17,268 16,278 16,285 17,290 19,297 19,303 20,313 22,318 25,325 30,334 38,341 48,347 59,350 62,353 67,367 72,381 76,391 78,398 80,405 83,411 87,415 90,421 96,428 104,436 113,443 122,450 134,457 145,462 155,466 168,470 182,472.55457" />
+        </svg>
+        <div id="damage-indicators"></div>
+      </div>
+    </main>
+    <div id="buttons">
+      <button type="button" id="buy-button">Buy 1 Alannovator (costs 100 alans)</button>
+      <button type="button" id="reset-button">Reset</button>
+    </div>
+  </div>
+
+  <script src="./index.js" async defer type="module"></script>
+</body>
+
+</html>

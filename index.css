@@ -1,0 +1,128 @@
+body {
+    margin: 0px;
+}
+:root {
+    font-family: "Audiowide", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#buttons {
+    height: 48px;
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 8px;
+}
+#buttons > * {
+    width: 196px;
+}
+
+
+
+#root {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+}
+
+#view {
+    flex: 1;
+    height: 100vh;
+
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    * {
+        user-select: none;
+        -webkit-user-select: none;
+    }
+}
+
+#alan-counter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size: 3em;
+    text-transform: uppercase;
+}
+
+#alan-root {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: 0px;
+    height: 0px;
+}
+
+#damage-indicators {
+    pointer-events: none;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+.damage-indicator {
+    position: absolute;
+    animation: ascend 1s;
+    top: 0px;
+}
+@keyframes ascend {
+    from {
+        opacity: 1;
+    }
+    to {
+        transform: translateY(-25vh);
+        opacity: 0;
+    }
+}
+
+#alan {
+    appearance: none;
+    border: none;
+
+    overflow: visible;
+    position: relative;
+    transform-origin: 0% 0%;
+    transition: 150ms ease;
+    transition-property: scale animation;
+    animation: alan-wobble1 750ms ease-in;
+
+    * {
+        pointer-events: none;
+    }
+}
+#alan:has(#alan-clickable:active) {
+    scale: 90%;
+    animation: alan-wobble2 750ms ease-in;
+}
+#alan-clickable {
+    cursor: pointer;
+    pointer-events: all;
+}
+
+@keyframes alan-wobble1 {
+    0% { transform: scale(100%) }
+    15% { transform: scale(106%) }
+    30% { transform: scale(94%) }
+    45% { transform: scale(103%) }
+    60% { transform: scale(97%) }
+    75% { transform: scale(102%) }
+    100% { transform: scale(100%) }
+}
+
+@keyframes alan-wobble2 {
+    0% { transform: scale(100%) }
+    15% { transform: scale(108%) }
+    30% { transform: scale(92%) }
+    45% { transform: scale(104%) }
+    60% { transform: scale(96%) }
+    75% { transform: scale(102%) }
+    100% { transform: scale(100%) }
+}
